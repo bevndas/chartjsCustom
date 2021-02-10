@@ -1,7 +1,14 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.chart {
+  position: relative;
+  width: 40%;
+  top: 50px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
