@@ -5,15 +5,10 @@ import Legend from "./Legend";
 import { LineChartOptions } from "./ChartOptions";
 
 const chartColors = [
-  "rgba(159, 19, 134, 0.4)",
-  "rgba(42, 146, 2, 0.5)",
-  "rgba(13, 12, 208, 0.4)",
-  "rgba(178,34,34, 1)",
-  "rgb(173,255,47)",
-  "rgb(224,255,255)",
-  "rgb(135,206,250)",
-  "rgb(72,61,139)",
-  "	rgb(255,20,147)",
+  "rgb(251, 96, 96)",
+  "rgb(29, 157, 72)",
+  "rgb(199, 166, 118)",
+  "rgb(13, 76, 160)",
 ];
 function generateData(props) {
   const { xaxis, data } = props;

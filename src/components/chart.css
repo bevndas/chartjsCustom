@@ -48,6 +48,7 @@
   border-radius: 8px;
   font-size: 0.75rem;
 }
+
 .tooltip table tbody tr td div.chart__data {
   display: flex;
   justify-content: space-between;
@@ -64,4 +65,18 @@
 .tooltip table tbody tr td span.data__second {
   position: relative;
   top: 2px;
+}
+.tooltip table tbody tr td.statistics {
+  color: #34a489;
+}
+.tooltip table tbody tr td span.data__key {
+  color: #1a1e25;
+}
+.tooltip table tbody tr td span.data__value {
+  color: #1a1e25;
+  font-weight: 500;
+}
+.tooltip table tbody tr td hr {
+  width: 100%;
+  border-top: 1px dashed #e5e5e5;
 }

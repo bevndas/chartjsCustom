@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { lengendMarkUp } from "./ChartFunctions";
 import Legend from "./Legend";
-
+import { BarChartOptions } from "./ChartOptions";
 const BarChart = ({ data }) => {
   const [legendData, setlegendData] = useState(null);
   const chartRef = useRef(null);
@@ -12,45 +12,7 @@ const BarChart = ({ data }) => {
       setlegendData(legend);
     }
   }, []);
-  const options = {
-    scales: {
-      xAxes: [
-        {
-          stacked: true,
-          ticks: {
-            padding: 10,
-          },
-          gridLines: {
-            display: true,
-            drawBorder: true,
-            drawTicks: false,
-            drawOnChartArea: false,
-            offsetGridLines: true,
-          },
-        },
-      ],
-      yAxes: [
-        {
-          stacked: true,
-          ticks: {
-            display: false,
-            min: 0,
-            stepSize: 2,
-          },
-          gridLines: {
-            display: false,
-            drawBorder: false,
-            drawOnChartArea: false,
-          },
-        },
-      ],
-    },
-    legend: {
-      display: false,
-      position: "right",
-    },
-    legendCallback: lengendMarkUp,
-  };
+  const options = BarChartOptions;
   return (
     <div className="chart-container">
       <div className="chart-header">

@@ -26,36 +26,36 @@ function App() {
     datasets: [
       {
         label: "Cashier",
-        backgroundColor: "rgba(178,34,34, 1)",
+        backgroundColor: "rgb(248, 176, 109)",
         borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
+        stack: "Stack 0",
         data: [32, 19, 85, 61, 36],
         borderWidth: 0,
         barThickness: 24,
       },
       {
         label: "3rd Party Vendor",
-        backgroundColor: "rgb(173,255,47)",
+        backgroundColor: "rgb(136, 124, 170)",
         borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
+        stack: "Stack 0",
         data: [15, 49, 90, 31, 46],
         borderWidth: 0,
         barThickness: 24,
       },
       {
         label: "Online",
-        backgroundColor: "rgb(224,255,255)",
+        backgroundColor: "rgb(140, 197, 201)",
         borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
+        stack: "Stack 0",
         data: [55, 39, 40, 71, 26],
         borderWidth: 0,
         barThickness: 24,
       },
       {
         label: "Areas",
-        backgroundColor: "rgb(72,61,139)",
+        backgroundColor: "rgb(251, 96, 96)",
         borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
+        stack: "Stack 1",
         data: [85, 29, 50, 81, 26],
         borderWidth: 0,
         barThickness: 24,
@@ -63,15 +63,15 @@ function App() {
     ],
   };
   return (
-    <div className="App">
-      <div className="chart">
-        <LineChart
-          data={lineChartData}
-          xaxis={["Jan", "Feb", "Mar", "Apr", "May"]}
-        />
-        <BarChart data={barChartData} />
+      <div className="App">
+        <div className="chart">
+          <LineChart
+              data={lineChartData}
+              xaxis={["Jan", "Feb", "Mar", "Apr", "May"]}
+          />
+          <BarChart data={barChartData} />
+        </div>
       </div>
-    </div>
   );
 }
 

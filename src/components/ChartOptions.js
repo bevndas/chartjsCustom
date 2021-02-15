@@ -1,4 +1,8 @@
-import { lengendMarkUp, customToolTip } from "./ChartFunctions";
+import {
+  lengendMarkUp,
+  customToolTip,
+  customBarToolTip,
+} from "./ChartFunctions";
 export const LineChartOptions = {
   responsive: true,
   scales: {
@@ -50,5 +54,55 @@ export const LineChartOptions = {
   hover: {
     mode: "nearest",
     intersect: false,
+  },
+};
+export const BarChartOptions = {
+  scales: {
+    xAxes: [
+      {
+        stacked: true,
+        ticks: {
+          padding: 10,
+        },
+        gridLines: {
+          display: true,
+          drawBorder: true,
+          drawTicks: false,
+          drawOnChartArea: false,
+          offsetGridLines: true,
+        },
+      },
+    ],
+    yAxes: [
+      {
+        stacked: true,
+        ticks: {
+          display: false,
+          min: 0,
+          stepSize: 2,
+        },
+        gridLines: {
+          display: false,
+          drawBorder: false,
+          drawOnChartArea: false,
+        },
+      },
+    ],
+  },
+  legend: {
+    display: false,
+    position: "right",
+  },
+  legendCallback: lengendMarkUp,
+  elements: {
+    arc: {
+      borderWidth: 0,
+    },
+  },
+  tooltips: {
+    enabled: false,
+    mode: "point",
+    intersect: true,
+    custom: customBarToolTip,
   },
 };
